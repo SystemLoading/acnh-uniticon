@@ -1,0 +1,23 @@
+[package]
+name = "icons"
+version = "0.1.0"
+authors = [
+    "SystemLoading"
+]
+edition = "2021"
+
+[package.metadata.skyline]
+titleid = "01006F8002326000" # ACNH Title ID
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+skyline = { git = "https://github.com/ultimate-research/skyline-rs.git" }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = true
